@@ -75,21 +75,20 @@ h4[3].textContent = siteContent['main-content']['product-h4']
 h4[4].textContent = siteContent['main-content']['vision-h4']
 
 
-//main content paragraohs//
+//main content paragraphs//
 const main = document.querySelectorAll('p');
 main[0].textContent = siteContent['main-content']['features-content']
 main[1].textContent = siteContent['main-content']['about-content']
-main[2].textContent = siteContent['main-content']['about-content']
-main[3].textContent = siteContent['main-content']['services-content']
-main[4].textContent = siteContent['main-content']['product-content']
-main[5].textContent = siteContent['main-content']['vision-content']
+main[2].textContent = siteContent['main-content']['services-content']
+main[3].textContent = siteContent['main-content']['product-content']
+main[4].textContent = siteContent['main-content']['vision-content']
 
 
 //Contact 
 const contacts = document.querySelector('.contact h4');
 contacts.textContent = siteContent.contact['contact-h4']
 
-// const addresses = document.querySelector('.contact address');
+ //const addresses = document.querySelector('.contact address');
 // addresses.textContent = siteContent.contact['address']
 
 // const telephone = document.querySelectorAll('.contact phone');
