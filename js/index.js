@@ -59,6 +59,8 @@ nav[5].textContent = siteContent['nav']['nav-item-6']
 const ctaH1 = document.querySelector('.cta h1');										
 ctaH1.textContent= siteContent.cta['h1']
 
+
+
 const ctaButton = document.querySelector('.cta button');										
 ctaButton.textContent= siteContent.cta['button']
 
