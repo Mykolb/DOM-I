@@ -84,20 +84,15 @@ main[3].textContent = siteContent['main-content']['product-content']
 main[4].textContent = siteContent['main-content']['vision-content']
 
 
-//Contact 
-const contacts = document.querySelector('.contact h4');
-contacts.textContent = siteContent.contact['contact-h4']
+//Contact//
+const contact = document.getElementsByClassName('contact')[0];
+contact.getElementsByTagName('h4')[0].innerHTML = siteContent['contact']['contact-h4']
+contact.getElementsByTagName('p')[0].innerHTML = siteContent['contact']['address']
+contact.getElementsByTagName('p')[1].innerHTML = siteContent['contact']['phone']
+contact.getElementsByTagName('p')[2].innerHTML = siteContent['contact']['email']
 
- //const addresses = document.querySelector('.contact address');
-// addresses.textContent = siteContent.contact['address']
-
-// const telephone = document.querySelectorAll('.contact phone');
-// telephone.textContent = siteContent.contact['phone']
-
-// const email = document.querySelectorAll('.contact email');
-// email.textContent = siteContent.contact['email']
 
 // //footer
 
-// const footer = document.getElementsByTagName('footer copyright');
-// footer.textContent = siteContent.footer['copyright']
+const footer = document.querySelector('footer');
+ footer.getElementsByTagName('p')[0].innerHTML = siteContent['footer']['copyright']
