@@ -81,6 +81,7 @@ const ctaH1 = document.querySelector('.cta h1');
 ctaH1.textContent= siteContent.cta['h1']
 // const ctaH1 = document.getElementsByClassName('cta-text')
 // ctaH1.textContent = siteContent['cta']['h1']
+console.log('ctaH1', ctaH1)
 
 
 const ctaButton = document.querySelector('.cta button');										
