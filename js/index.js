@@ -37,16 +37,7 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
-
-//images//
-const headerImage = document.getElementById('cta-img');
-headerImage.setAttribute('src', siteContent['cta']['img-src'])
-
 //nav//
-//const nav = document.querySelectorAll('nav a');
 const nav = document.querySelectorAll('nav a');
 nav[0].textContent = siteContent['nav']['nav-item-1']
 nav[1].textContent = siteContent['nav']['nav-item-2']
@@ -55,14 +46,41 @@ nav[3].textContent = siteContent['nav']['nav-item-4']
 nav[4].textContent = siteContent['nav']['nav-item-5']
 nav[5].textContent = siteContent['nav']['nav-item-6']
 
+//turns original links green not added links 
 nav.forEach((a, cb) => {
-  a.style.color = "green";
+  a.style.color = 'green';
 })
+
+//works
+newNav = document.querySelectorAll("nav")[0];
+let createNewNav = (element) => {
+let newNode = document.createElement("a");
+newNode.textContent = element;
+return newNode;
+}
+newNav.prepend(createNewNav("Profile"));
+newNav.append(createNewNav("Volunteer"));
+
+
+
+const allLinks = document.querySelectorAll('nav a')
+allLinks.forEach((a, link) => a.style.color= 'green')
+
+// Example: Update the img src for the logo
+const logoImage = document.getElementById("logo-img");
+logoImage.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//images//
+const headerImage = document.getElementById('cta-img');
+headerImage.setAttribute('src', siteContent['cta']['img-src'])
+
 
 //cta//
 const ctaH1 = document.querySelector('.cta h1');										
 ctaH1.textContent= siteContent.cta['h1']
-
+// const ctaH1 = document.getElementsByClassName('cta-text')
+// ctaH1.textContent = siteContent['cta']['h1']
 
 
 const ctaButton = document.querySelector('.cta button');										
@@ -80,6 +98,11 @@ h4[2].textContent = siteContent['main-content']['services-h4']
 h4[3].textContent = siteContent['main-content']['product-h4']
 h4[4].textContent = siteContent['main-content']['vision-h4']
 
+h4.forEach((h4, cb) => {
+  h4.style.color = 'blue';
+})
+
+
 
 //main content paragraphs//
 const main = document.querySelectorAll('p');
@@ -89,16 +112,25 @@ main[2].textContent = siteContent['main-content']['services-content']
 main[3].textContent = siteContent['main-content']['product-content']
 main[4].textContent = siteContent['main-content']['vision-content']
 
+// main.forEach((main, cb) => {
+//   main.style.
+// })
+
 
 //Contact//
+//looked for tag names b/c they didn't have classes 
 const contact = document.getElementsByClassName('contact')[0];
 contact.getElementsByTagName('h4')[0].innerHTML = siteContent['contact']['contact-h4']
 contact.getElementsByTagName('p')[0].innerHTML = siteContent['contact']['address']
 contact.getElementsByTagName('p')[1].innerHTML = siteContent['contact']['phone']
 contact.getElementsByTagName('p')[2].innerHTML = siteContent['contact']['email']
+console.log('contact', contact)
+
 
 
 // //footer
 
 const footer = document.querySelector('footer');
  footer.getElementsByTagName('p')[0].innerHTML = siteContent['footer']['copyright']
+
+
